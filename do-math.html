@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>React State & Props</title>
+  </head>
+  <body>
+    <div id='root'></div>
+
+    <!-- ************* REACT STUFF ***************** -->
+    <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+    <script crossorigin src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+
+      class App extends React.Component {
+        render() {
+          return (
+            <div>Nothing is here</div>
+          )
+        }
+      }
+
+      class TestNumbers extends React.Component {
+        render() {
+          let firstNumber = 1;
+          let secondNumber = 2
+          return (
+            <div>{firstNumber} and {secondNumber}</div>
+          )
+        }
+      }
+
+      class DoAddition extends React.Component {
+        render() {
+          return (
+            <h1>{this.props.num1 + this.props.num2}</h1>
+          )
+        }
+      }
+
+      ReactDOM.render(<App />, document.getElementById('root'))
+    </script>
+  </body>
+</html>
